@@ -1,28 +1,32 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div id="tabs">
+      <md-tabs class="md-primary" md-sync-route>
+        <md-tab id="tab-1" md-label="Reportes" to="/" exact></md-tab>
+        <md-tab id="tab-2" md-label="Dispositivos" to="/Dispositivos"></md-tab>
+        <md-tab id="tab-3" md-label="Dashboard" to="/Dashboard"></md-tab>
+        <md-tab id="tab-4" md-label="Alertas" to="/Alertas"></md-tab>
+      </md-tabs>
+    </div>
+    <router-view />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+export default {};
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css?family=Material+Icons");
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+#tabs {
+  border: solid;
+  border-color: #084B8A;
 }
 </style>
